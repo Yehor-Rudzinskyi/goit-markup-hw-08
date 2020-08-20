@@ -1,0 +1,12 @@
+%social-icons {
+  width: 20px;
+  height: 20px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* продумать наследование цвета */
+}
+
+%flex-centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

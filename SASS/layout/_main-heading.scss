@@ -1,0 +1,48 @@
+.main {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/background_header/Header.jpg);
+
+  text-align: center;
+}
+
+.main-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  color: $text-dark-theme-color;
+
+  @include font(44px, 1.36, 900);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  animation: zoomtitle 1000ms linear;
+}
+
+.main-heading-order-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+
+  background-color: $accent;
+  color: $text-dark-theme-color;
+
+  @include font(16px, 1.88, 700);
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  outline: none;
+}

@@ -1,0 +1,19 @@
+@import './utils/nornalize';
+@import './base/fonts';
+@import './utils/mixins';
+@import './utils/variebles';
+@import './utils/placeholders';
+@import './base/base';
+@import './utils/animation';
+
+@import './components/modal';
+@import './components/main-title-subtitle';
+@import './components/container';
+
+@import './layout/header';
+@import './layout/main-heading';
+@import './layout/about-us';
+@import './layout/doing';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/footer';
