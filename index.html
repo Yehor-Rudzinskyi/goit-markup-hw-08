@@ -12,11 +12,18 @@
   </head>
   <body>
     <!-- Шапка с навигацией header-->
-    <header class="container">
-      <nav class="navigation">
-        <a class="logo link" id="flag" href="" lang="en">
-          <span>Web</span> Studio</a
-        >
+    <header class="header">
+      <div class="container header-container">
+      <a class="logo link" id="flag" href="" lang="en">
+        <span>Web</span>Studio</a
+      >
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navigation-menu" data-menu-button>
+        <svg class="burger-menu" width="40" height="40">
+          <use class="icon-open" href="./images/sprite.svg#icon-openB"></use>
+          <use class="icon-close" href="./images/sprite.svg#icon-closeB"></use>
+        </svg>
+      </button>
+      <nav class="navigation-menu" data-menu>
         <ul class="navigation-list list">
           <li class="navigation-list-item studio">
             <a class="navigation-list-link studio link" href="">Студия</a>
@@ -37,7 +44,7 @@
                 class="address-header-link link"
                 href="mailto:info@devstudio.com"
               >
-                <svg class="header-icons" width="16" height="11.2">
+                <svg class="header-icons" width="14" height="10">
                   <use href="./images/sprite.svg#icon-envelope"></use>
                 </svg>
                 info@devstudio.com</a
@@ -45,7 +52,7 @@
             </li>
             <li class="adress-header-list-item">
               <a class="address-header-link link" href="tel:+380961111111">
-                <svg class="header-icons" width="10" height="15">
+                <svg class="header-icons" width="10" height="14">
                   <use href="./images/sprite.svg#icon-smartphone"></use>
                 </svg>
                 +38 096 111 11 11</a
@@ -54,10 +61,11 @@
           </ul>
         </address>
       </nav>
+      </div>
     </header>
     <main>
       <!-- Заголовок main-->
-      <section class="main">
+      <!-- <section class="main">
         <h1 class="main-heading">
           Эффективные решения <br />
           для вашего бизнеса
@@ -65,9 +73,9 @@
         <button class="main-heading-order-button" data-modal-open>
           Заказать услугу
         </button>
-      </section>
+      </section> -->
       <!-- О нас about us -->
-      <section class="about-us container">
+      <!-- <section class="about-us container">
         <h2 hidden>о нас</h2>
         <ul class="about-us-list list">
           <li class="about-us-list-item">
@@ -121,9 +129,9 @@
             </p>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- Чем мы занимаемся doing -->
-      <section class="doing container">
+      <!-- <section class="doing container">
         <h2 class="doing-title main-title">Чем мы занимаемся</h2>
         <ul class="doing-list list">
           <li class="doing-list-item">
@@ -157,9 +165,9 @@
             <h3 class="doing-subtitle main-subtitle">Дизайнерские решения</h3>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- Наша команда team -->
-      <section class="team">
+      <!-- <section class="team">
         <div class="container">
           <h2 class="team-title main-title">Наша команда</h2>
           <ul class="team-list list">
@@ -417,9 +425,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Постоянные клиенты clients -->
-      <section class="clients container">
+      <!-- <section class="clients container">
         <h2 class="clients-title main-title">Постоянные клиенты</h2>
         <ul class="clients-list list">
           <li class="clients-list-item">
@@ -484,9 +492,9 @@
           </li>
         </ul>
       </section>
-    </main>
+    </main> -->
     <!-- Подвал -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="footer-block container">
         <div class="footer-address-block first-footer-block">
           <a class="logo link logo-f" href="#flag" lang="en">
@@ -657,7 +665,8 @@
           </button>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

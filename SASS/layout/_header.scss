@@ -1,51 +1,34 @@
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
-.navigation {
+.header-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.navigation-list {
-  display: flex;
-}
-
 .logo {
-  display: block;
-  margin-right: 85px;
-
-  color: #000;
-
-  font-family: Raleway;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-
-  span {
+  font-family: $secondary-font;
+  @include font(24px, 1.17, 700);
+  letter-spacing: 0.03em;
+  color: inherit;
+  & span {
     color: $accent;
   }
 }
 
-.navigation-list-item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .navigation-list-link {
-  display: block;
+  display: inline-block;
   position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: $primary-text-color;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(21px, 1.17, 500);
   letter-spacing: 0.02em;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  color: inherit;
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
   &.studio {
     color: $accent;
 
@@ -53,7 +36,7 @@
       content: '';
       display: block;
       position: absolute;
-      bottom: 0;
+      bottom: -10px;
       width: 100%;
       height: 4px;
 
@@ -61,68 +44,183 @@
       border-radius: 2px;
     }
   }
-  &:hover,
-  &:focus {
-    color: $accent;
-    fill: $accent;
-  }
-}
-
-/* АДРЕСС НАВИГАЦИИ */
-
-.address-header {
-  margin-left: auto;
-}
-
-.address-header-list {
-  display: flex;
-}
-
-.adress-header-list-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .address-header-link {
-  display: flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
+  display: inline-block;
+  @include font(21px, 1.17, 500);
   color: $secomdary-text-color;
-
-  @include font(14px, 1.14, 500);
-  letter-spacing: 0.02em;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus,
-  &:hover .header-icons,
-  &:focus .header-icons {
-    fill: $accent;
-    color: $accent;
-  }
 }
 
 .header-icons {
   fill: $secomdary-text-color;
   margin-right: 10px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* vertical-align: middle; */
 }
 
-/* Тренька c псевдо */
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
-/* .address-header-link.link::before {
-  content: '';
-  display: inline-flex;
-  width: 16px;
-  height: 11px;
+  .menu-btn {
+    display: flex;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    z-index: 100;
+    &:hover .icon-open,
+    &:focus .icon-open,
+    &.is-open:focus .icon-close,
+    &.is-open:hover .icon-close {
+      fill: $accent;
+    }
+    &.is-open {
+      .icon-close {
+        display: block;
+      }
+      .icon-open {
+        display: none;
+      }
+    }
+  }
 
-  background-image: url(../images/address_logo/envelope.svg);
-} */
+  .icon-close {
+    display: none;
+  }
 
-/* 2 способ - унаследованием родного цвета и ховера у родителя: */
+  .navigation-menu {
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 393px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-/* fill: currentColor;
-  margin-right: 10px; */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    &.is-open {
+      animation: zoomtitle 500ms linear;
+      opacity: 1;
+    }
+  }
+
+  .navigation-list-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .navigation-list {
+    margin-bottom: 60px;
+  }
+
+  .adress-header-list-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .header-container {
+    justify-content: start;
+  }
+
+  .logo {
+    margin-right: 88px;
+  }
+
+  .navigation-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation-list {
+    display: flex;
+    align-items: center;
+    margin-right: 84px;
+  }
+  .navigation-list-link {
+    @include font(14px, 1.14, 500);
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .navigation-list-item:not(:last-child) {
+    margin-right: 48px;
+  }
+
+  .header-icons {
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  .navigation-list-link.studio::after {
+    bottom: 0;
+  }
+
+  .adress-header-list-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .address-header-link {
+    @include font(12px, 1.16, 500);
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+  }
+
+  .navigation-list {
+    margin-right: 305px;
+  }
+  .navigation-menu {
+    align-items: baseline;
+  }
+  .address-header-list {
+    display: flex;
+  }
+
+  .adress-header-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .address-header-link {
+    // display: flex;
+    // align-items: center;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
+
+    color: $secomdary-text-color;
+
+    @include font(14px, 1.14, 500);
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:hover .header-icons,
+    &:focus .header-icons {
+      fill: $accent;
+      color: $accent;
+    }
+  }
+
+  .header-icons {
+    fill: $secomdary-text-color;
+    margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* vertical-align: middle; */
+  }
+}

@@ -1,46 +1,46 @@
-.about-us {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+// .about-us {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
 
-.about-us-list {
-  display: flex;
-}
+// .about-us-list {
+//   display: flex;
+// }
 
-.about-us-list-item {
-  width: calc((100% - 90px) / 4);
+// .about-us-list-item {
+//   width: calc((100% - 90px) / 4);
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
+//   &:not(:last-child) {
+//     margin-right: 30px;
+//   }
+// }
 
-.about-us-block {
-  @extend %flex-centre;
+// .about-us-block {
+//   @extend %flex-centre;
 
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
+//   width: 270px;
+//   height: 120px;
+//   margin-bottom: 30px;
 
-  background-color: $secondary-background-color;
-}
+//   background-color: $secondary-background-color;
+// }
 
-.about-us-icons {
-  width: 70px;
-  height: 70px;
-}
+// .about-us-icons {
+//   width: 70px;
+//   height: 70px;
+// }
 
-.about-us-subtitle {
-  margin-bottom: 10px;
-}
+// .about-us-subtitle {
+//   margin-bottom: 10px;
+// }
 
-.about-us-description {
-  margin: 0;
+// .about-us-description {
+//   margin: 0;
 
-  color: $secomdary-text-color;
+//   color: $secomdary-text-color;
 
-  @include font(14px, 1.71);
-}
+//   @include font(14px, 1.71);
+// }
 
 /* проба псевдо
 
