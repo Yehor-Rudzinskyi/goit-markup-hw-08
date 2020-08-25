@@ -57,14 +57,15 @@
     padding-bottom: 94px;
   }
   .about-us-list {
+    margin: -15px;
     display: flex;
   }
   .about-us-list-item {
     width: calc((100% - 90px) / 4);
 
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    // &:not(:last-child) {
+    //   margin-right: 30px;
+    // }
   }
 }
 
