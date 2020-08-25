@@ -1,0 +1,111 @@
+.main {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  text-align: center;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/background_header/Header.jpg');
+  background-size: cover;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/background_header/Header2x.jpg');
+  }
+}
+
+.main-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  color: $text-dark-theme-color;
+
+  @include font(26px, 1.62, 900);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  animation: zoomtitle 1000ms linear;
+}
+
+.main-heading-order-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+
+  background-color: $accent;
+  color: $text-dark-theme-color;
+
+  @include font(16px, 1.88, 700);
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 480px) {
+  .main {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/background_header/Header768.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/background_header/Header768@2x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/background_header/Header1200.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/background_header/Header1200@2x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-heading {
+    @include font(44px, 1.36, 900);
+  }
+  .main {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}

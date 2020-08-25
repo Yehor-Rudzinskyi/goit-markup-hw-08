@@ -626,7 +626,6 @@ address {
 
 .header {
   position: relative;
-  border-bottom: 1px solid #ececec;
 }
 
 .header-container {
@@ -694,6 +693,7 @@ address {
   .header {
     padding-top: 10px;
     padding-bottom: 10px;
+    border-bottom: 1px solid #ececec;
   }
   .menu-btn {
     display: flex;
@@ -702,6 +702,7 @@ address {
     background-color: transparent;
     padding: 0;
     z-index: 100;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu-btn:hover .icon-open,
   .menu-btn:focus .icon-open,
@@ -779,6 +780,7 @@ address {
   .header-icons {
     vertical-align: middle;
     margin-right: 8px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .navigation-list-link.studio::after {
     bottom: 0;
@@ -791,6 +793,13 @@ address {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .address-header-link:hover, .address-header-link:focus,
+  .address-header-link:hover .header-icons,
+  .address-header-link:focus .header-icons {
+    fill: #2196f3;
+    color: #2196f3;
   }
 }
 
@@ -811,24 +820,97 @@ address {
     margin-right: 30px;
   }
   .address-header-link {
-    color: #757575;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .address-header-link:hover, .address-header-link:focus,
-  .address-header-link:hover .header-icons,
-  .address-header-link:focus .header-icons {
-    fill: #2196f3;
-    color: #2196f3;
   }
   .header-icons {
-    fill: #757575;
     margin-right: 10px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    /* vertical-align: middle; */
+  }
+}
+
+.main {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background_header/Header.jpg");
+  background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .main {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background_header/Header2x.jpg");
+  }
+}
+
+.main-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  animation: zoomtitle 1000ms linear;
+}
+
+.main-heading-order-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2196f3;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 480px) {
+  .main {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background_header/Header768.jpg");
+  }
+}
+
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .main {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background_header/Header768@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background_header/Header1200.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .main {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background_header/Header1200@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-heading {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+  .main {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 
