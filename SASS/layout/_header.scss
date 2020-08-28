@@ -110,6 +110,7 @@
     &.is-open {
       animation: zoomtitle 500ms linear;
       opacity: 1;
+      z-index: 10;
     }
   }
 
