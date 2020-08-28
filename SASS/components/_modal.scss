@@ -20,7 +20,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
-  min-width: 528px;
+  min-width: 450px;
+  @media screen and (min-width: 1200px) {
+    min-width: 580px;
+  }
 
   text-align: center;
   background-color: #fff;
@@ -140,6 +143,11 @@
 }
 
 .modal-checkbox-label {
+  @media screen and (max-width: 1199px) {
+    display: block;
+    @include font(12px, 1.17);
+    text-align: start;
+  }
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -168,9 +176,14 @@
 }
 
 .checkbox-icon {
+  @media screen and (max-width: 1199px) {
+    vertical-align: middle;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 13px;
+  }
   display: inline-block;
-  margin-left: 13px;
-  margin-right: 7px;
+  margin-right: 6px;
   width: 16px;
   height: 15px;
 
@@ -188,5 +201,7 @@
 }
 
 .checkbox-icon + a {
-  margin-left: 5px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 5px;
+  }
 }

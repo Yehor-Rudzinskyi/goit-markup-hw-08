@@ -543,7 +543,6 @@ address {
     border: none;
     background-color: transparent;
     padding: 0;
-    z-index: 100;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu-btn:hover .icon-open,
@@ -562,7 +561,6 @@ address {
     display: none;
   }
   .navigation-menu {
-    opacity: 0;
     position: absolute;
     top: 100%;
     right: 0;
@@ -573,10 +571,16 @@ address {
     padding-bottom: 60px;
     background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    transition: scale 1500ms linear;
+    opacity: 0;
+    transform: scale(0);
+    visibility: hidden;
+    transition: 500ms linear;
   }
   .navigation-menu.is-open {
-    animation: zoomtitle 500ms linear;
     opacity: 1;
+    transform: scale(1);
+    visibility: visible;
     z-index: 10;
   }
   .navigation-list-item:not(:last-child) {
@@ -786,6 +790,12 @@ address {
   display: block;
   position: relative;
   overflow: hidden;
+}
+
+.cards-top img {
+  width: 100%;
+  max-height: 294px;
+  object-fit: cover;
 }
 
 .portfolio-overlay-cards {
