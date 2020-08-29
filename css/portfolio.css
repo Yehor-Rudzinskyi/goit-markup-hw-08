@@ -363,6 +363,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -469,6 +475,15 @@ address {
 .header {
   position: relative;
   border-bottom: 1px solid #ececec;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+  }
 }
 
 .header-container {

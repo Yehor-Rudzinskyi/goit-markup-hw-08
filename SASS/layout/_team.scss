@@ -11,8 +11,8 @@
 }
 
 .team-photo-thumb {
-  width: 450px;
-  height: 460px;
+  // width: 450px;
+  // height: 460px;
   & .team-img {
     display: block;
     height: 100%;
@@ -23,8 +23,11 @@
 }
 
 .team-name-block {
-  display: inline-block;
-  padding: 30px 122px 24px 122px;
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  text-align: center;
+  // padding: 30px 122px 24px 122px;
   background-color: $text-dark-theme-color;
 }
 
@@ -72,6 +75,7 @@
 
 .team-social-list {
   display: flex;
+  justify-content: center;
 }
 
 .team-social-list-item:not(:last-child) {

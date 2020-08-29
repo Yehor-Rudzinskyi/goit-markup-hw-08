@@ -376,6 +376,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -681,6 +687,15 @@ address {
 .header {
   position: relative;
   border-bottom: 1px solid #ececec;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+  }
 }
 
 .header-container {
@@ -1017,7 +1032,7 @@ address {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .about-us-list {
     display: flex;
     flex-wrap: wrap;
@@ -1082,11 +1097,6 @@ address {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-photo-thumb {
-  width: 450px;
-  height: 460px;
-}
-
 .team-photo-thumb .team-img {
   display: block;
   height: 100%;
@@ -1095,8 +1105,10 @@ address {
 }
 
 .team-name-block {
-  display: inline-block;
-  padding: 30px 122px 24px 122px;
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  text-align: center;
   background-color: #fff;
 }
 
@@ -1138,6 +1150,7 @@ address {
 
 .team-social-list {
   display: flex;
+  justify-content: center;
 }
 
 .team-social-list-item:not(:last-child) {

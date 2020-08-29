@@ -43,7 +43,7 @@
     margin: 15px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .about-us-list {
     display: flex;
     flex-wrap: wrap;
