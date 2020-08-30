@@ -474,7 +474,6 @@ address {
 
 .header {
   position: relative;
-  border-bottom: 1px solid #ececec;
 }
 
 @media screen and (max-width: 767px) {
@@ -485,6 +484,10 @@ address {
     background-color: #fff;
     z-index: 100;
   }
+}
+
+.h-border {
+  border-bottom: 1px solid #ececec;
 }
 
 .header-container {
